@@ -51,8 +51,7 @@ body {
     z-index: 0;
 }
 
-/* --- THE TEXTURE OVERLAY --- */
-/* This adds a subtle, TV-static/grain texture over the entire background */
+/* --- THE TEXTURE OVERLAY (Faint Paper Lines) --- */
 body::before {
     content: "";
     position: fixed;
@@ -60,10 +59,16 @@ body::before {
     left: 0; 
     width: 100vw; 
     height: 100vh;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.04; /* Keeps it very subtle */
+    /* Creates faint horizontal ruled lines */
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 39px,
+        rgba(150, 150, 150, 0.15) 39px,
+        rgba(150, 150, 150, 0.15) 40px
+    );
     z-index: -1;
-    pointer-events: none; /* Allows clicking through the texture */
+    pointer-events: none; 
 }
 
 /* --- THE iOS BUBBLE EFFECT (Glassmorphism) --- */
@@ -193,10 +198,10 @@ main {
 
 .profile-img-container {
     flex-shrink: 0;
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 480px; /* Makes it a long portrait rectangle */
     padding: 1rem;
-    border-radius: 50% !important; 
+    border-radius: 32px !important; /* Matches the glass bubble curves */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,7 +211,7 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 20px; /* Slightly sharper inner curve for a framed look */
 }
 
 .hero-text {
