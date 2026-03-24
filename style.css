@@ -352,10 +352,11 @@ main {
 
 /* Aligns everything to the top of the row to control exactly where things sit */
 .exp-header {
+    position: relative; /* This acts as the anchor for the badge */
     display: flex;
     align-items: flex-start; 
     width: 100%;
-    margin-top: -37.5px; /* Pulls the entire row up so exactly 50% of the 75px logo is over the image */
+    margin-top: -37.5px; 
     z-index: 2;
     margin-bottom: 1.5rem;
     gap: 1.2rem;
@@ -400,15 +401,17 @@ main {
     color: var(--text-secondary);
 }
 
-/* Pushed to the far right, aligned with title, and scaled down */
+/* Pinned absolutely to the far right */
 .exp-badge {
-    margin-right: auto; /* Pushes the badge all the way to the right edge */
-    margin-top: 0px; /* Aligns the badge perfectly with the top of the 'SPARTANS CLUB' title */
-    padding: 0.25rem 0.75rem; /* Reduced padding to make the pill smaller */
+    position: absolute; /* Bulletproof positioning */
+    right: 0;           /* Pins it perfectly to the right edge */
+    top: 0px;          /* Aligns it perfectly with the title text */
+    margin: 0;          /* Removes old margins to prevent conflict */
+    padding: 0.25rem 0.75rem;
     border: 1px solid rgba(59, 130, 246, 0.5); 
     color: var(--accent-color);
     border-radius: 100px;
-    font-size: 0.65rem; /* Smaller font size for a sleeker look */
+    font-size: 0.65rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
