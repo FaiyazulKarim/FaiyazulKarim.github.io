@@ -405,7 +405,7 @@ main {
 .exp-badge {
     position: absolute; /* Bulletproof positioning */
     right: 0;           /* Pins it perfectly to the right edge */
-    top: 0px;          /* Aligns it perfectly with the title text */
+    top: 20px;          /* Aligns it perfectly with the title text */
     margin: 0;          /* Removes old margins to prevent conflict */
     padding: 0.25rem 0.75rem;
     border: 1px solid rgba(59, 130, 246, 0.5); 
@@ -590,4 +590,12 @@ footer {
     /* Make the header stack neatly on smaller mobile screens */
     .exp-header { flex-wrap: wrap; }
     .exp-badge { margin-left: 0; margin-top: 10px; }
+    /* Mobile adjustments */
+    .exp-header { flex-wrap: wrap; }
+    .exp-badge { 
+        position: relative; /* Resets positioning for mobile */
+        top: auto; 
+        right: auto; 
+        margin-top: 10px; 
+    }
 }
