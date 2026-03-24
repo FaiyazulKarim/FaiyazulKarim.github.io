@@ -350,15 +350,15 @@ main {
     position: relative;
 }
 
-/* Aligns everything to the bottom of the logo */
+/* The New Header Layout */
 .exp-header {
     display: flex;
-    align-items: flex-end; /* Forces text to align with bottom of logo */
-    gap: 1.2rem;
-    margin-top: -37.5px; /* Exactly 50% of logo sits over image */
+    align-items: center; /* Aligns items across the center of the row */
+    width: 100%;
+    margin-top: -37.5px; /* Pulls the entire row up so exactly 50% of the 75px logo is over the image */
     z-index: 2;
     margin-bottom: 1.5rem;
-    width: 100%;
+    gap: 1.2rem;
 }
 
 .exp-logo {
@@ -377,13 +377,12 @@ main {
     object-fit: contain;
 }
 
-/* Pushed down and aligned */
 .exp-header-info {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    gap: 2px;
-    margin-bottom: 4px; /* Flushes text perfectly with the logo bottom */
+    justify-content: center;
+    gap: 4px;
+    margin-top: 55px; /* Pushes the text completely DOWN and OFF the image */
 }
 
 .exp-header-info .company {
@@ -400,10 +399,10 @@ main {
     color: var(--text-secondary);
 }
 
-/* Pushed to the far right */
+/* Pushed to the far right and aligned with the text */
 .exp-badge {
-    margin-left: auto; /* Pushes badge to far right */
-    margin-bottom: 6px; /* Aligns with bottom of logo/text */
+    margin-left: auto; /* This pushes the badge all the way to the right edge of the card */
+    margin-top: 55px; /* Pushes the badge down off the image so it perfectly aligns with the text */
     padding: 0.3rem 1rem;
     border: 1px solid rgba(59, 130, 246, 0.5); 
     color: var(--accent-color);
@@ -413,7 +412,7 @@ main {
     text-transform: uppercase;
     letter-spacing: 1px;
     background: rgba(15, 23, 42, 0.8); 
-    white-space: nowrap; /* Prevents text splitting */
+    white-space: nowrap; /* Prevents the badge text from breaking into two lines */
 }
 
 .exp-title {
