@@ -1,367 +1,4 @@
-/* Blue-Coded Glassmorphism Variables */
-:root {
-    /* Light Mode: Icy Blue with soft gradients */
-    --bg-gradient: radial-gradient(at 0% 0%, #dbeafe 0, transparent 50%), radial-gradient(at 100% 100%, #bfdbfe 0, transparent 50%);
-    --bg-color: #eff6ff; 
-    --text-color: #0f172a; 
-    --text-secondary: #334155;
-    --accent-color: #2563eb; /* Vibrant Royal Blue */
-    
-    /* Light Glass Effect Colors */
-    --glass-bg: rgba(255, 255, 255, 0.55);
-    --glass-border: rgba(255, 255, 255, 0.6);
-    --glass-shadow: 0 8px 32px rgba(37, 99, 235, 0.08);
-}
-
-[data-theme="dark"] {
-    /* Dark Mode: Deep, solid true black */
-    --bg-gradient: none; 
-    --bg-color: #000000; 
-    --text-color: #f8fafc;
-    --text-secondary: #94a3b8;
-    --accent-color: #60a5fa; /* Glowing Neon Blue */
-    
-    /* Dark Glass Effect Colors */
-    --glass-bg: rgba(15, 23, 42, 0.45);
-    --glass-border: rgba(96, 165, 250, 0.15); 
-    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-}
-
-/* Global Reset & Typography */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: '-apple-system', 'BlinkMacSystemFont', 'Inter', sans-serif;
-    background-color: var(--bg-color);
-    background-image: var(--bg-gradient);
-    background-attachment: fixed;
-    color: var(--text-color);
-    line-height: 1.6;
-    transition: background-color 0.4s ease, background-image 0.4s ease, color 0.4s ease;
-    position: relative;
-    z-index: 0;
-}
-
-/* --- THE TEXTURE OVERLAY (Subtle Dotted Grid) --- */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; 
-    left: 0; 
-    width: 100vw; 
-    height: 100vh;
-    background-image: radial-gradient(rgba(150, 150, 150, 0.4) 1px, transparent 1px);
-    background-size: 20px 20px; 
-    opacity: 0.8; 
-    z-index: -1;
-    pointer-events: none; 
-}
-
-/* --- THE iOS BUBBLE EFFECT (Glassmorphism) --- */
-.glass-bubble {
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    border-radius: 32px; 
-    box-shadow: var(--glass-shadow);
-    padding: 2.5rem;
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.4s ease;
-}
-
-.glass-bubble:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
-    border-color: var(--accent-color);
-}
-
-/* Navigation */
-.glass-nav {
-    position: fixed;
-    top: 1rem;
-    left: 5%;
-    right: 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    border-radius: 100px; 
-    z-index: 1000;
-    box-shadow: var(--glass-shadow);
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--accent-color);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 600;
-    font-size: 0.95rem;
-    display: inline-block; 
-    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), text-shadow 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--accent-color);
-    transform: scale(1.15); 
-    text-shadow: 0 0 12px var(--accent-color); 
-}
-
-.theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: var(--text-color);
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.theme-toggle:hover {
-    transform: scale(1.2) rotate(15deg);
-}
-
-/* Layout & Sections */
-main {
-    padding: 0 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section {
-    padding: 7rem 0 3rem 0;
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.section-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: var(--text-color);
-    font-weight: 700;
-    letter-spacing: -0.05em;
-}
-
-.glass-bubble-title {
-    display: inline-block;
-    padding: 0.5rem 1.5rem;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    border-radius: 100px;
-    box-shadow: var(--glass-shadow);
-}
-
-/* Hero Section */
-.hero {
-    min-height: 100vh;
-}
-
-.hero-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    margin-top: 4rem;
-}
-
-.profile-img-container {
-    flex-shrink: 0;
-    width: 320px;
-    height: 480px; 
-    padding: 1rem;
-    border-radius: 32px !important; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px; 
-}
-
-.hero-text {
-    flex-grow: 1;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.05em;
-}
-
-.highlight {
-    color: var(--accent-color);
-    text-shadow: 0 0 20px rgba(96, 165, 250, 0.4); 
-}
-
-.hero h2 {
-    font-size: 1.8rem;
-    color: var(--text-secondary);
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    max-width: 600px;
-    margin-bottom: 2rem;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background-color: var(--accent-color);
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 100px; 
-    font-weight: 600;
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s, box-shadow 0.2s;
-    border: none;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4); 
-}
-
-.btn:hover {
-    transform: scale(1.08);
-    background-color: #1d4ed8;
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6);
-}
-
-.btn.outline {
-    background-color: transparent;
-    color: var(--text-color);
-    border: 2px solid var(--text-color);
-    box-shadow: none;
-}
-
-.btn.outline:hover {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-    background: transparent;
-    box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
-}
-
-.content-box p {
-    font-size: 1.15rem;
-    color: var(--text-secondary);
-    max-width: 800px;
-}
-
-.exp-img-gradient {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 20px; /* Much shorter so the effect isn't 'too much' */
-    
-    /* Fades perfectly into the menu color */
-    background: linear-gradient(to bottom, transparent 0%, var(--glass-bg) 100%);
-}
-
-/* The New Header Layout */
-.exp-content {
-    padding: 0 2rem 2.5rem 2rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.exp-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.2rem;
-    margin-top: -37px; /* Pulls EXACTLY half the logo up over the image line */
-    z-index: 2;
-    margin-bottom: 1.5rem;
-}
-
-.exp-logo {
-    width: 75px;
-    height: 75px;
-    background-color: #ffffff; 
-    border-radius: 16px;
-    padding: 8px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    flex-shrink: 0; /* Prevents the logo from squishing */
-}
-
-.exp-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.exp-header-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px; /* Slightly better spacing between title and date */
-    margin-top: 45px; /* Pushes the text down so it sits entirely BELOW the picture */
-}
-
-.exp-header-info .company {
-    font-weight: 700;
-    font-size: 1.15rem;
-    color: var(--accent-color);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 1;
-}
-
-.exp-header-info .date {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin-bottom: 4px;
-}
-
-.section-subtitle::before {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: var(--accent-color);
-}
-
-.main-heading {
-    font-size: 3.5rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 3rem;
-    line-height: 1.1;
-    letter-spacing: -1px;
-    color: var(--text-color);
-}
-
+/* --- EXPERIENCE CARDS & PHOTO GALLERY --- */
 .exp-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -371,10 +8,11 @@ main {
 .exp-card {
     display: flex;
     flex-direction: column;
-    padding: 0; 
+    padding: 0; /* Removing padding so the image touches the edges */
     overflow: hidden;
 }
 
+/* Smooth Blurry Image Fade */
 .exp-img-wrapper {
     position: relative;
     height: 240px;
@@ -392,16 +30,13 @@ main {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 45px; /* Much shorter so the effect isn't 'too much' */
-    
-    /* Fades perfectly into the menu color */
+    height: 120px;
     background: linear-gradient(to bottom, transparent 0%, var(--glass-bg) 100%);
-    
-    /* Adds the exact same frosted glass effect as your navigation menu */
-    backdrop-filter: blur(20px); 
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(4px); /* This adds that mixed/blurry effect to the fade line */
+    -webkit-backdrop-filter: blur(4px);
 }
 
+/* The New Header Layout */
 .exp-content {
     padding: 0 2rem 2.5rem 2rem;
     flex-grow: 1;
@@ -414,7 +49,7 @@ main {
     display: flex;
     align-items: flex-start;
     gap: 1.2rem;
-    margin-top: -45px; 
+    margin-top: -45px; /* Pulls logo up over the blur */
     z-index: 2;
     margin-bottom: 1.5rem;
 }
@@ -422,7 +57,7 @@ main {
 .exp-logo {
     width: 75px;
     height: 75px;
-    background-color: #ffffff; 
+    background-color: #ffffff; /* Always white so logos look clean */
     border-radius: 16px;
     padding: 8px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
@@ -439,7 +74,7 @@ main {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-    margin-top: 40px; 
+    margin-top: 40px; /* Pushes text down below the logo */
 }
 
 .exp-header-info .company {
@@ -456,18 +91,20 @@ main {
     margin-bottom: 4px;
 }
 
+/* The Dark Pill Badge */
 .exp-badge {
     padding: 0.3rem 1rem;
-    border: 1px solid rgba(59, 130, 246, 0.5); 
+    border: 1px solid rgba(59, 130, 246, 0.5); /* Soft blue border */
     color: var(--accent-color);
     border-radius: 100px;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    background: rgba(15, 23, 42, 0.8); 
+    background: rgba(15, 23, 42, 0.8); /* Dark slate background */
 }
 
+/* Content Details */
 .exp-title {
     font-size: 1.3rem;
     font-weight: 700;
@@ -487,6 +124,7 @@ main {
 .exp-details li { margin-bottom: 0.6rem; }
 .exp-details li strong { color: var(--text-color); }
 
+/* Photo Button Styling */
 .btn-photos {
     background: transparent;
     border: 1px solid var(--glass-border);
@@ -511,7 +149,7 @@ main {
 
 /* --- LIGHTBOX MODAL STYLES --- */
 .modal {
-    display: none; 
+    display: none; /* Hidden by default */
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -573,66 +211,3 @@ main {
 }
 
 .modal-close:hover { color: var(--accent-color); }
-
-/* --- OTHER SECTIONS --- */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card { text-align: center; }
-.card-icon { font-size: 3rem; margin-bottom: 1rem; }
-.project-card h3 { margin-bottom: 0.5rem; color: var(--text-color); font-size: 1.4rem; }
-.project-card p { font-weight: 400; color: var(--text-secondary); font-size: 1rem; }
-
-/* --- SKILLS ICONS STYLING --- */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.skill-card {
-    display: flex; 
-    align-items: center;
-    justify-content: flex-start; 
-    gap: 1.5rem; 
-    font-weight: 600;
-    font-size: 1.15rem;
-    padding: 1.5rem 2rem;
-    border-radius: 24px;
-    text-align: left; 
-}
-
-.skill-icon {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15)); 
-    transition: transform 0.3s ease;
-}
-
-.skill-card:hover .skill-icon {
-    transform: scale(1.1) translateY(-3px);
-}
-
-.text-center { text-align: center; }
-
-footer {
-    text-align: center;
-    padding: 3rem;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
-@media (max-width: 900px) {
-    .hero-content { flex-direction: column; text-align: center; }
-    .hero-content .btn { margin: 0 auto; }
-    .profile-img-container { width: 250px; height: 350px; }
-    .hero h1 { font-size: 2.5rem; }
-    .hero h2 { font-size: 1.5rem; }
-    .nav-links { display: none; }
-    .glass-nav { border-radius: 20px; }
-    .main-heading { font-size: 2.5rem; }
-}
