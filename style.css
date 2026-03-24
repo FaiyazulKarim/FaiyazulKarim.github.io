@@ -405,7 +405,7 @@ main {
 .exp-badge {
     position: absolute; /* Bulletproof positioning */
     right: 0;           /* Pins it perfectly to the right edge */
-    top: 30px;          /* Aligns it perfectly with the title text */
+    top: 45px;          /* Aligns it perfectly with the title text */
     margin: 0;          /* Removes old margins to prevent conflict */
     padding: 0.25rem 0.75rem;
     border: 1px solid rgba(59, 130, 246, 0.5); 
