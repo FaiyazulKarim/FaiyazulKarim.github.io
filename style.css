@@ -400,10 +400,10 @@ main {
     color: var(--text-secondary);
 }
 
-/* Smaller badge, pinned perfectly to the top right */
+/* Pushed to the far right, aligned with title, and scaled down */
 .exp-badge {
-    margin-left: auto; /* Pushes the badge all the way to the right edge */
-    margin-top: 45px; /* Aligns the badge perfectly with the top of the title text */
+    margin-right: auto; /* Pushes the badge all the way to the right edge */
+    margin-top: 20px; /* Aligns the badge perfectly with the top of the 'SPARTANS CLUB' title */
     padding: 0.25rem 0.75rem; /* Reduced padding to make the pill smaller */
     border: 1px solid rgba(59, 130, 246, 0.5); 
     color: var(--accent-color);
