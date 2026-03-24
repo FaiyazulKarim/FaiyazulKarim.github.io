@@ -14,17 +14,17 @@
 }
 
 [data-theme="dark"] {
-    /* Dark Mode: Deep Midnight Blue with glowing gradients */
-    --bg-gradient: radial-gradient(at 0% 0%, #1e3a8a 0, transparent 50%), radial-gradient(at 100% 100%, #172554 0, transparent 50%);
-    --bg-color: #020617; /* Very dark slate blue */
+    /* Dark Mode: Deep, solid true black */
+    --bg-gradient: none; /* This completely removes the gradient */
+    --bg-color: #000000; /* True black for maximum contrast */
     --text-color: #f8fafc;
     --text-secondary: #94a3b8;
     --accent-color: #60a5fa; /* Glowing Neon Blue */
     
     /* Dark Glass Effect Colors */
     --glass-bg: rgba(15, 23, 42, 0.45);
-    --glass-border: rgba(96, 165, 250, 0.15); /* Blue tinted border */
-    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --glass-border: rgba(96, 165, 250, 0.15); 
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.6); /* Slightly stronger shadow so bubbles pop against the black */
 }
 
 /* Global Reset & Typography */
@@ -59,11 +59,9 @@ body::before {
     left: 0; 
     width: 100vw; 
     height: 100vh;
-    /* This creates the perfectly round dots */
-    background-image: radial-gradient(rgba(150, 150, 150, 0.4) 1.5px, transparent 1.5px);
-    /* This controls the spacing between the dots (20px by 20px box) */
+    /* Changed to 1px to make the dots noticeably smaller and sharper */
+    background-image: radial-gradient(rgba(150, 150, 150, 0.4) 1px, transparent 1px);
     background-size: 20px 20px; 
-    /* This controls how faint the pattern is. Lower number = fainter */
     opacity: 0.8; 
     z-index: -1;
     pointer-events: none; 
