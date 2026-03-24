@@ -371,3 +371,179 @@ footer {
     margin-bottom: 1.5rem;
     border: 1px solid var(--glass-border);
 }
+/* --- NEW EXPERIENCE CARDS DESIGN --- */
+.section-subtitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-subtitle::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.main-heading {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: var(--text-color);
+}
+
+.exp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+/* The Card Itself */
+.exp-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    overflow: hidden; /* Keeps the image inside the rounded corners */
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.exp-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+    border-color: var(--accent-color);
+}
+
+/* Image Header Area */
+.exp-img-wrapper {
+    position: relative;
+    height: 220px;
+    width: 100%;
+}
+
+.exp-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* This creates the smooth fade from the image to the card background */
+.exp-img-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, var(--glass-bg));
+}
+
+/* Inner Content Area */
+.exp-content {
+    padding: 0 2rem 2.5rem 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.exp-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-top: -30px; /* Pulls the logo up into the image area */
+    position: relative;
+    z-index: 2;
+    margin-bottom: 1.5rem;
+}
+
+/* The Overlapping Logo Box */
+.exp-logo {
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg-color); /* Solid background to block out the image */
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 2px solid var(--glass-border);
+}
+
+.exp-meta {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+}
+
+.exp-meta .company {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.exp-meta .date {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* The Blue Pill Badge */
+.exp-badge {
+    align-self: flex-start;
+    padding: 0.3rem 1rem;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    background: rgba(37, 99, 235, 0.1); /* Very faint blue fill */
+}
+
+/* Typography inside the card */
+.exp-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    line-height: 1.3;
+}
+
+.exp-details {
+    list-style-position: outside;
+    margin-left: 1.2rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.exp-details li {
+    margin-bottom: 0.6rem;
+}
+
+.exp-details li strong {
+    color: var(--text-color);
+}
+
+/* Responsive adjustment for the giant heading */
+@media (max-width: 768px) {
+    .main-heading { font-size: 2.5rem; }
+}
