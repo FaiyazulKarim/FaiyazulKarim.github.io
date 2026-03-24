@@ -1,36 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- THEME TOGGLE LOGIC ---
+// --- THEME TOGGLE LOGIC ---
     const themeToggle = document.getElementById('theme-toggle');
-    const iconSpan = themeToggle.querySelector('.icon');
     const htmlElement = document.documentElement;
 
+    // Check for saved theme in browser storage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         htmlElement.setAttribute('data-theme', savedTheme);
-        updateIcon(savedTheme);
     } else {
+        // Check system preferences if no saved theme exists
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const initialTheme = prefersDark ? 'dark' : 'light';
-        htmlElement.setAttribute('data-theme', initialTheme);
-        updateIcon(initialTheme);
+        htmlElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
     }
 
+    // Toggle logic on click
     themeToggle.addEventListener('click', () => {
         const currentTheme = htmlElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         
         htmlElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
-        updateIcon(newTheme);
     });
-
-    function updateIcon(theme) {
-        if (theme === 'dark') {
-            iconSpan.textContent = '☀️'; 
-        } else {
-            iconSpan.textContent = '🌙'; 
-        }
-    }
 
     // --- PHOTO GALLERY MODAL LOGIC ---
     const photoBtns = document.querySelectorAll('.btn-photos');
