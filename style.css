@@ -11,6 +11,9 @@
     --glass-bg: rgba(255, 255, 255, 0.55);
     --glass-border: rgba(255, 255, 255, 0.6);
     --glass-shadow: 0 8px 32px rgba(37, 99, 235, 0.08);
+
+    /* --- NEW: Dynamic Component Backgrounds --- */
+    --badge-bg: rgba(37, 99, 235, 0.1); /* Faint transparent blue for light mode */
 }
 
 [data-theme="dark"] {
@@ -25,6 +28,9 @@
     --glass-bg: rgba(15, 23, 42, 0.45);
     --glass-border: rgba(96, 165, 250, 0.15); 
     --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+
+    /* --- NEW: Dynamic Component Backgrounds --- */
+    --badge-bg: rgba(15, 23, 42, 0.8); /* Dark slate for dark mode */
 }
 
 /* Global Reset & Typography */
@@ -401,21 +407,21 @@ main {
     color: var(--text-secondary);
 }
 
-/* Pinned absolutely to the far right */
+/* Smaller badge, pinned perfectly to the top right */
 .exp-badge {
-    position: absolute; /* Bulletproof positioning */
-    right: 0;           /* Pins it perfectly to the right edge */
-    top: 45px;          /* Aligns it perfectly with the title text */
-    margin: 0;          /* Removes old margins to prevent conflict */
-    padding: 0.25rem 0.75rem;
+    position: absolute; 
+    right: 0;           
+    top: 45;             
+    margin: 0;          
+    padding: 0.25rem 0.75rem; 
     border: 1px solid rgba(59, 130, 246, 0.5); 
     color: var(--accent-color);
     border-radius: 100px;
-    font-size: 0.65rem;
+    font-size: 0.65rem; 
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    background: rgba(15, 23, 42, 0.8); 
+    background: var(--badge-bg); /* This now swaps automatically based on the theme! */
     white-space: nowrap; 
 }
 
