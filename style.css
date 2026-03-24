@@ -276,14 +276,19 @@ main {
     max-width: 800px;
 }
 
-/* Smooth Fade (No literal blur) */
 .exp-img-gradient {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px; /* Gives a smooth, deep fade to the bottom of the photo */
+    height: 40px; /* Much shorter so the effect isn't 'too much' */
+    
+    /* Fades perfectly into the menu color */
     background: linear-gradient(to bottom, transparent 0%, var(--glass-bg) 100%);
+    
+    /* Adds the exact same frosted glass effect as your navigation menu */
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px);
 }
 
 /* The New Header Layout */
