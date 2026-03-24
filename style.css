@@ -51,7 +51,7 @@ body {
     z-index: 0;
 }
 
-/* --- THE TEXTURE OVERLAY (Faint Paper Lines) --- */
+/* --- THE TEXTURE OVERLAY (Subtle Dotted Grid) --- */
 body::before {
     content: "";
     position: fixed;
@@ -59,18 +59,15 @@ body::before {
     left: 0; 
     width: 100vw; 
     height: 100vh;
-    /* Creates faint horizontal ruled lines */
-    background-image: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 39px,
-        rgba(150, 150, 150, 0.15) 39px,
-        rgba(150, 150, 150, 0.15) 40px
-    );
+    /* This creates the perfectly round dots */
+    background-image: radial-gradient(rgba(150, 150, 150, 0.4) 1.5px, transparent 1.5px);
+    /* This controls the spacing between the dots (20px by 20px box) */
+    background-size: 20px 20px; 
+    /* This controls how faint the pattern is. Lower number = fainter */
+    opacity: 0.8; 
     z-index: -1;
     pointer-events: none; 
 }
-
 /* --- THE iOS BUBBLE EFFECT (Glassmorphism) --- */
 .glass-bubble {
     background: var(--glass-bg);
@@ -364,4 +361,13 @@ footer {
     .hero h2 { font-size: 1.5rem; }
     .nav-links { display: none; }
     .glass-nav { border-radius: 20px; }
+}
+/* Styling for images inside experience/achievement cards */
+.card-img {
+    width: 100%;
+    height: 200px; /* Keeps all images a uniform height */
+    object-fit: cover; /* Ensures images don't stretch weirdly */
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--glass-border);
 }
