@@ -471,6 +471,7 @@ main {
     justify-content: center;
     gap: 4px;
     margin-top: 45px; /* 45px pushes it safely below the 37.5px image line */
+    padding-right: 130px; /* Prevents text from overlapping the absolute badge */
 }
 
 .exp-header-info .company {
@@ -664,6 +665,7 @@ footer {
     
     /* Make the header stack neatly on smaller mobile screens */
     .exp-header { flex-wrap: wrap; }
+    .exp-header-info { padding-right: 0; }
     .exp-badge { margin-left: 0; margin-top: 10px; }
     /* Mobile adjustments */
     .exp-header { flex-wrap: wrap; }
