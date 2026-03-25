@@ -16,38 +16,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="glass-nav">
-        <nav class="glass-nav">
+   <nav class="glass-nav">
         <div class="logo">
             <a href="#hero"><img src="fk-logo.jpg" alt="FK Logo"></a>
         </div>
-        <ul class="nav-links">
-            ```
-*(I also wrapped it in an `<a href="#hero">` tag, so if someone clicks your logo, it smoothly scrolls them back to the top of the page!)*
-
-### Step 3: Update your CSS
-Right now, your CSS is set up to style text, not an image. Let's fix that so the logo fits perfectly inside the glass menu.
-
-Open your `style.css` file, find the `.logo` class (around line 95), and **replace** it with this code:
-
-```css
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 38px; /* Keeps the logo neatly contained within the navbar */
-    width: 38px;
-    object-fit: cover;
-    border-radius: 8px; /* Adds a slight, modern curve to the sharp square edges */
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
-}
-
-.logo img:hover {
-    transform: scale(1.1) rotate(-5deg); /* Gives it a fun little pop when hovered */
-    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4);
-}
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -55,7 +27,7 @@ Open your `style.css` file, find the `.logo` class (around line 95), and **repla
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
             <div class="toggle-track">
                 <div class="toggle-thumb">
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -74,7 +46,6 @@ Open your `style.css` file, find the `.logo` class (around line 95), and **repla
                     </svg>
                 </div>
             </div>
-        </button>
         </button>
     </nav>
 
