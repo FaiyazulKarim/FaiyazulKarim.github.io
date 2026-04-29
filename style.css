@@ -781,3 +781,97 @@ footer {
     margin-bottom: 1rem;
     color: var(--text-color);
 }
+/* =========================================
+   FIXED BLOG/ARTICLE PAGE STYLES
+   ========================================= */
+
+/* Ensure the nav doesn't overlap the content */
+.blog-nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--bg-color); /* Matches theme */
+    z-index: 1000;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+/* Cinematic Hero Header */
+.blog-hero {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem 10%;
+    overflow: hidden;
+}
+
+.blog-hero-content {
+    max-width: 900px;
+    z-index: 2;
+}
+
+.blog-title {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive text */
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.blog-meta {
+    display: flex;
+    gap: 1.5rem;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+}
+
+/* The Reading Container - This is the most important fix */
+.blog-main {
+    max-width: 850px; /* Limits width for readability */
+    margin: -50px auto 4rem auto; /* Pulls intro up onto the image slightly */
+    padding: 0 5%;
+    position: relative;
+    z-index: 10;
+}
+
+/* Styled Intro Block */
+.blog-intro {
+    border-left: 5px solid var(--accent-color);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    padding: 2.5rem;
+    border-radius: 0 24px 24px 0;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    box-shadow: var(--glass-shadow);
+}
+
+/* Article Body Typography */
+.blog-text {
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.blog-text h2 {
+    font-size: 2rem;
+    margin: 3rem 0 1rem 0;
+    color: var(--accent-color);
+}
+
+.blog-text p {
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    .blog-hero { min-height: 40vh; padding: 2rem 5%; }
+    .blog-intro { padding: 1.5rem; font-size: 1.1rem; }
+}
