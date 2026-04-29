@@ -714,3 +714,38 @@ footer {
 #projects .exp-card {
     min-height: 300px;
 }
+
+/* Tighter grid spacing */
+.exp-grid {
+    gap: 1.5rem; /* Reduced from 2.5rem */
+}
+
+/* Reduce bubble padding */
+.glass-bubble {
+    padding: 1.5rem; /* Reduced from 2.5rem */
+}
+
+/* Adjust project-specific content spacing */
+.exp-content {
+    padding: 0 1rem 1.5rem 1rem; /* Reduced inner padding */
+}
+
+/* Smaller Deliverables Section */
+.deliverables-container {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.deliverable-buttons {
+    display: flex; 
+    gap: 0.75rem; 
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+/* Compact button style for cards */
+.btn-sm {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.85rem !important;
+}
