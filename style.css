@@ -711,3 +711,6 @@ footer {
 #projects strong {
     color: var(--text-color);
 }
+#projects .exp-card {
+    min-height: 300px;
+}
