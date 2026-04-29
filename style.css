@@ -697,3 +697,17 @@ footer {
     transform: scale(1.1) rotate(-5deg);
     box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4);
 }
+/* --- PROJECTS SECTION IMPROVEMENT --- */
+#projects .exp-content p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+#projects .exp-title {
+    margin-bottom: 1rem;
+}
+
+#projects strong {
+    color: var(--text-color);
+}
