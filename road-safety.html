@@ -5,8 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Cost of a Commute | Faiyaz ul Karim</title>
     <link rel="icon" type="image/jpeg" href="fk-logo.jpg"> 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Updated Editorial Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ── PAGE-SPECIFIC OVERRIDES ── */
+
+        .blog-title {
+            font-family: 'Playfair Display', Georgia, serif !important;
+            font-style: italic;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+        }
+
+        /* Article body overrides */
+        .blog-text p,
+        .blog-intro,
+        .blog-text ul {
+            font-family: 'Source Serif 4', Georgia, serif !important;
+            font-size: 1.1rem;
+            line-height: 1.82;
+        }
+
+        .blog-text h2 {
+            font-family: 'IBM Plex Mono', monospace !important;
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.55;
+            margin: 2.8rem 0 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Section rule */
+        .section-rule {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2.4rem 0 1.8rem;
+        }
+
+        .section-rule::before,
+        .section-rule::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(128,118,108,0.3);
+        }
+
+        .section-rule span {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.6rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            opacity: 0.45;
+            white-space: nowrap;
+        }
+
+        /* Closing line */
+        .closing-line {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 1.35rem !important;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1.5px solid rgba(128,118,108,0.3);
+            letter-spacing: -0.01em;
+            color: var(--text-color);
+        }
+
+        /* Image placeholders */
+        .image-placeholder.glass-bubble {
+            margin: 2rem 0;
+        }
+
+        .image-placeholder.glass-bubble img {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .image-placeholder.glass-bubble .caption {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.68rem;
+            letter-spacing: 0.05em;
+            opacity: 0.5;
+            margin-top: 0.6rem;
+            text-align: center;
+        }
+
+        /* Dropcap */
+        .blog-text > p:first-child::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 0.82;
+            float: left;
+            margin-right: 0.1em;
+            margin-top: 0.1em;
+            color: #e11d48; /* Matches your Social Commentary badge color */
+        }
+    </style>
 </head>
 <body>
     <nav class="blog-nav">
@@ -21,7 +123,7 @@
 
     <header class="blog-hero" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url('odd2.png'); background-size: cover; background-position: center;">
         <div class="blog-hero-content">
-            <span class="blog-badge" style="background: #e11d48; padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; color: #fff; font-weight: 700; text-transform: uppercase;">Social Commentary</span>
+            <span class="blog-badge" style="background: #e11d48; padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; color: #fff; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Social Commentary</span>
             <h1 class="blog-title">The Cost of a Commute: Accountability in the Wake of Tragedy</h1>
             <div class="blog-meta">
                 <span>✍️ Faiyaz ul Karim</span>
@@ -46,12 +148,16 @@
                 <p class="caption">A loss that resonates: Pial's untimely departure has sparked a national conversation on road safety.</p>
             </div>
 
+            <div class="section-rule"><span>The Routine</span></div>
             <h2>A Poisoned Routine</h2>
+            
             <p>While we mourn, we have to look at the ugly, repetitive truth behind this incident: our roads are broken. Every morning, the news feed is a casualty list. We have reached a point where fatal accidents are treated as "common occurrences," accepted with a shrug and a sigh. This normalization is a poison gradually seeping into our national consciousness.</p>
 
             <p>Road accidents have been a persistent shadow over Bangladesh for the last decade, stubbornly remaining a crisis despite massive public movements. We all remember 2018, when two college students were killed by reckless driving, sparking a nationwide outcry for safer roads. It is a damning indictment of our justice system that it took the collective rage of the youth for a single moment of accountability to occur.</p>
 
+            <div class="section-rule"><span>The Data</span></div>
             <h2>The Information Cloud</h2>
+            
             <p>In 2023, the Bangladesh Jatri Kalyan Samity (BJKS) reported over 7,902 deaths in 6,261 accidents. Curiously, the Bangladesh Road Transport Authority (BRTA) annual report cited only 5,024 deaths for the same period. This discrepancy isn't just a clerical error; it’s a battle of narratives. When the two primary bodies responsible for road data spend more time accusing each other of fabrication than solving the problem, the victims are the ones who pay the price.</p>
 
             <div class="image-placeholder glass-bubble">
@@ -61,10 +167,14 @@
 
             <p>Why is this information so cloudy? Why are organizations like <strong>NISCHA (Nirapad Sarak Chai)</strong>, who have spent decades fighting for safer streets, left to work in the shadows without proper support from the authorities? The lack of a unified, transparent record is the biggest hurdle to reform. If we can't even agree on how many people are dying, how can we ever hope to stop the deaths?</p>
 
+            <div class="section-rule"><span>Accountability</span></div>
             <h2>Demanding Answers</h2>
+            
             <p>The absence of accountability is the oxygen that keeps this fire burning. In the Odd Signature accident, two lives were lost and countless others were devastated. Who takes the blame? Who is held accountable for the crumbling infrastructure, the lack of department oversight, and the culture of reckless driving? To eradicate this problem, we must ensure those responsible for our safety feel the weight of their inaction.</p>
 
-            <p>Let us take the tragic loss of Pial as a painful reminder that these "unnecessary" deaths happen far too often. Our deepest condolences go out to the families of Pial, Salam, and everyone impacted by this tragedy. We hope you find strength. We hope you find justice. But most of all, we hope that one day, a road in Bangladesh can just be a road again.</p>
+            <p>Let us take the tragic loss of Pial as a painful reminder that these "unnecessary" deaths happen far too often. Our deepest condolences go out to the families of Pial, Salam, and everyone impacted by this tragedy. We hope you find strength. We hope you find justice.</p>
+
+            <p class="closing-line">But most of all, we hope that one day, a road in Bangladesh can just be a road again.</p>
         </article>
     </main>
 
