@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subodh, are you alive? | Faiyaz ul Karim</title>
+  <link rel="icon" type="image/jpeg" href="fk-logo.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ── PAGE-SPECIFIC OVERRIDES ── */
+
+    .blog-hero {
+      background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.88)), url('subodh-hero.jpg');
+      background-size: cover;
+      background-position: center top;
+    }
+
+    .blog-title {
+      font-family: 'Playfair Display', Georgia, serif !important;
+      font-style: italic;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    /* Article body overrides */
+    .blog-text p,
+    .blog-intro {
+      font-family: 'Source Serif 4', Georgia, serif !important;
+      font-size: 1.1rem;
+      line-height: 1.82;
+    }
+
+    .blog-text h2 {
+      font-family: 'IBM Plex Mono', monospace !important;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.55;
+      margin: 2.8rem 0 1.1rem;
+      font-weight: 500;
+    }
+
+    /* Section rule */
+    .section-rule {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2.4rem 0 1.8rem;
+    }
+
+    .section-rule::before,
+    .section-rule::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(128,118,108,0.3);
+    }
+
+    .section-rule span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      white-space: nowrap;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 3px solid #c0392b;
+      margin: 2.2rem 0;
+      padding: 0.5rem 0 0.5rem 1.4rem;
+    }
+
+    .pull-quote .bengali {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.22rem;
+      line-height: 1.5;
+      display: block;
+      margin-bottom: 0.45rem;
+    }
+
+    .pull-quote .translation {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      opacity: 0.5;
+    }
+
+    /* Closing line */
+    .closing-line {
+      font-family: 'Playfair Display', serif !important;
+      font-size: 1.35rem !important;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1.5px solid rgba(128,118,108,0.3);
+      letter-spacing: -0.01em;
+    }
+
+    /* Image placeholders */
+    .image-placeholder.glass-bubble {
+      margin: 2rem 0;
+    }
+
+    .image-placeholder.glass-bubble img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .image-placeholder.glass-bubble .caption {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.05em;
+      opacity: 0.5;
+      margin-top: 0.6rem;
+      text-align: center;
+    }
+
+    /* Dropcap */
+    .blog-text > p:first-child::first-letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 0.82;
+      float: left;
+      margin-right: 0.1em;
+      margin-top: 0.1em;
+      color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="blog-nav">
+    <div class="logo">
+      <a href="index.html"><img src="fk-logo.jpg" alt="FK Logo" style="width: 42px; border-radius: 8px;"></a>
+    </div>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <button id="theme-toggle" class="theme-toggle"></button>
+      <a href="work.html" class="btn outline" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">← BACK TO WORK</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="blog-hero">
+    <div class="blog-hero-content">
+      <span class="blog-badge" style="background: #c0392b; padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; color: #fff; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Street Art &amp; Culture</span>
+      <h1 class="blog-title">"Subodh, are you alive?"</h1>
+      <div class="blog-meta">
+        <span>✍️ Faiyaz ul Karim</span>
+        <span>📅 2024</span>
+        <span>⏱️ 4 min read</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="blog-main">
+
+    <div class="blog-intro" style="margin-top: 6rem;">
+      In 2017, a ragged young man appeared on the walls of Dhaka. He carried a caged sun in his hands and a weight on his back that most of us recognized immediately. His name was Subodh.
+    </div>
+
+    <article class="blog-text">
+
+      <p>As an average youth of Bangladesh, my life is probably an adequate representative of the rebellious yet vegetative state the youth of Bangladesh are in right now. We see and understand everything, but we hesitate. We hesitate to speak about it. We hesitate because we fear the consequences, but mostly we hesitate because we don't believe it will make a difference. It is an easy and effective excuse for us to stay silent.</p>
+
+      <p>In 2017 however, an anomaly named Subodh emerged in the streets of Dhaka.</p>
+
+      <p>Subodh is an almost ragged young man. He carries a head full of unkempt hair and a face full of beard that symbolize his unruly nature. A man who was born on the streets of Dhaka. Through the injustice and unfairness this city projects, a young man continues his journey to survive. That is Subodh.</p>
+
+      <div class="image-placeholder glass-bubble">
+        <img src="subodh-main.jpg" alt="Subodh graffiti by Hobeki on the walls of Dhaka">
+        <p class="caption">Subodh on the walls of Dhaka — created by the anonymous artist Hobeki.</p>
+      </div>
+
+      <p>In a more grounded sense, Subodh is the protagonist of a series of street art and graffiti done by an anonymous artist called "Hobeki". Subodh is a fictional character that showcases the struggles of a common man in this country. His struggles are shown visually through shabby clothes, scars, and a rather homeless appearance. All of the Subodh graffiti artworks are done with stencils and sprayed in a black-and-white color scheme. The colorless scheme supports the notion of despair and hopelessness. The only thing that has any color in these artworks is the sun, which Subodh often holds in his hands. The sun can be interpreted as a symbol of freedom, hope, life. This makes the sun ever more important for someone like Subodh, who is constantly searching for that freedom. But here is the problem: the sun is always caged. It is confined within a cage of sorts, symbolizing the nature of the so-called freedom we have.</p>
+
+      <div class="section-rule"><span>Origins</span></div>
+      <h2>How did Subodh come to fruition?</h2>
+
+      <p>To understand that, we have to go back a little and understand the concept of modern graffiti culture.</p>
+
+      <p>Graffiti has made its place as one of the most impactful forms of contemporary art in recent years. History suggests that graffiti has always been a form of expressing the defiant mindset of the general people. One of the first examples of modern graffiti was a rather humorous doodle titled "Kilroy was here," which became prominent during World War 2 as American soldiers started using it to mark their presence. A much more modern approach to street art can be seen in the works of Blek Le Rat, Jean-Michel Basquiat, and Banksy. Blek Le Rat in particular introduced the world to the power of stencils and sprays. This led to the emergence of a new generation of graffiti artists who adopted stencils as their primary technique, with Banksy being one of the most notable figures.</p>
+
+      <div class="image-placeholder glass-bubble">
+        <img src="banksy.jpg" alt="Banksy street art">
+        <p class="caption">Banksy's "Girl with the Balloon" — one of the most iconic pieces of anti-establishment street art.</p>
+      </div>
+
+      <p>Banksy is undoubtedly the most prominent street artist out there. He is an anonymous artist who made his name known globally through his out-of-the-box artworks that comment on societal and political themes people often don't speak about. His works like "Girl with the Balloon" and "Flower Thrower" showcase the need for peace and freedom. Banksy speaks against oppression, inequality, discrimination. His works are often labeled as anti-establishment and anti-authoritarian, as they always challenge the societal structure and hierarchy. One of the main reasons Banksy has become so socially relevant is his anonymous and provocative nature. The artist not being visible to the public eye makes his artworks all the more interesting to look at.</p>
+
+      <div class="section-rule"><span>Context</span></div>
+      <h2>Graffiti in Bangladesh</h2>
+
+      <p>Wall art has been present in Bangladeshi culture for a long time. But street art or graffiti as we know it found its inception rather recently. During the language movement and anti-Pakistan government protests in the last century, a lot of street art circulated in the streets of Bangladesh as an expression of anger and rebellion. After liberation, much street art could be seen during the 90s Anti-Authoritarian Movement.</p>
+
+      <p>In recent times, Subodh has been one of the very few street artworks that has been able to generate some sort of buzz. Similar to Banksy, Hobeki maintains an anonymous persona. It has become sort of a trademark for him. That is why a lot of people call him "Bangla's Banksy" or "Banksy of Bangladesh".</p>
+
+      <p>However, even though there are some striking resemblances between Banksy's artworks and Subodh, it would be totally unfair to say that they are the same. Sure, all of these artworks come from a place of suffering. But they are fundamentally different. Banksy asks for a wind of change. He is not satisfied with the way things are and he wants it to change. He is hopeful that it will change. He asks for peace and freedom. Banksy's art resembles hope.</p>
+
+      <p>Subodh, on the other hand, is just an expression. An outcry. Subodh a lot of the time doesn't have any hope about his situation at all. Sometimes someone tells Subodh:</p>
+
+      <div class="pull-quote">
+        <span class="bengali">"tui paliye jaa, tor bhagge kichu nei"</span>
+        <span class="translation">— "Run away, there's nothing for you."</span>
+      </div>
+
+      <div class="image-placeholder glass-bubble">
+        <img src="subodh-run.jpg" alt="Subodh graffiti with the Bengali text tui paliye jaa">
+        <p class="caption">"Run away, there's nothing for you" — the most haunting of Hobeki's Subodh pieces.</p>
+      </div>
+
+      <p>This sends a strong message. A message that this country, this nation, this society hasn't been able to give Subodh anything but pain. It is a harsh statement. But it is one that encompasses the despair and anguish the youth of this country feel on a constant basis. There is a huge part of the young generation that is searching for a way to leave. Not because they hate this country, but because they feel hopeless here. A voice similar to the one telling Subodh also tells them that there's nothing for them here. The voice tells them their misery won't end if they stay. And maybe the voice is right. Hard to know.</p>
+
+      <p>That begs a question. Where is Subodh? In this situation when the hopelessness among youth has reached its peak, where is the symbol of struggle? Makes someone like me ask:</p>
+
+      <p class="closing-line">"Subodh, are you alive?"</p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Faiyaz ul Karim.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
