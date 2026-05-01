@@ -5,8 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhallywood's Urban Void | Faiyaz ul Karim</title>
     <link rel="icon" type="image/jpeg" href="fk-logo.jpg"> 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ── PAGE-SPECIFIC OVERRIDES ── */
+
+        .blog-hero {
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.88)), url('Screenshot 2026-04-29 115446.png');
+            background-size: cover;
+            background-position: center top;
+        }
+
+        .blog-title {
+            font-family: 'Playfair Display', Georgia, serif !important;
+            font-style: italic;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+        }
+
+        /* Article body overrides */
+        .blog-text p,
+        .blog-intro,
+        .blog-text ul {
+            font-family: 'Source Serif 4', Georgia, serif !important;
+            font-size: 1.1rem;
+            line-height: 1.82;
+        }
+
+        .blog-text h2 {
+            font-family: 'IBM Plex Mono', monospace !important;
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.55;
+            margin: 2.8rem 0 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Section rule */
+        .section-rule {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2.4rem 0 1.8rem;
+        }
+
+        .section-rule::before,
+        .section-rule::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(128,118,108,0.3);
+        }
+
+        .section-rule span {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.6rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            opacity: 0.45;
+            white-space: nowrap;
+        }
+
+        /* Pull quote (Kept for consistency if you add quotes later) */
+        .pull-quote {
+            border-left: 3px solid #c0392b;
+            margin: 2.2rem 0;
+            padding: 0.5rem 0 0.5rem 1.4rem;
+        }
+
+        /* Closing line */
+        .closing-line {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 1.35rem !important;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1.5px solid rgba(128,118,108,0.3);
+            letter-spacing: -0.01em;
+            color: var(--text-color);
+        }
+
+        /* Image placeholders */
+        .image-placeholder.glass-bubble {
+            margin: 2rem 0;
+        }
+
+        .image-placeholder.glass-bubble img {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .image-placeholder.glass-bubble .caption {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.68rem;
+            letter-spacing: 0.05em;
+            opacity: 0.5;
+            margin-top: 0.6rem;
+            text-align: center;
+        }
+
+        /* Dropcap */
+        .blog-text > p:first-child::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 0.82;
+            float: left;
+            margin-right: 0.1em;
+            margin-top: 0.1em;
+            color: #c0392b;
+        }
+    </style>
 </head>
 <body>
     <nav class="blog-nav">
@@ -19,9 +133,9 @@
         </div>
     </nav>
 
-    <header class="blog-hero" style="background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('Screenshot 2026-04-29 115446.png'); background-size: cover; background-position: center;">
+    <header class="blog-hero">
         <div class="blog-hero-content">
-            <span class="blog-badge" style="background: var(--accent-color); padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; color: #fff; font-weight: 700; text-transform: uppercase;">Cinema & Society</span>
+            <span class="blog-badge" style="background: #c0392b; padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; color: #fff; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Cinema & Society</span>
             <h1 class="blog-title">Dhallywood's Urban Void: The Absence of the Middle Class on Screen</h1>
             <div class="blog-meta">
                 <span>✍️ Faiyaz ul Karim</span>
@@ -41,7 +155,9 @@
             
             <p>Many Dhallywood blockbusters – from <i>Beder Meye Josna</i> to <i>Monpura</i> – revolved around rural life or poverty dramas, rather than the experiences of Dhaka’s growing professional class. Only a handful of socially conscious films, such as <i>Matir Moina</i>, <i>Lal Salu</i>, and <i>Kittonkhola</i>, have tackled middle-class themes, and those were primarily art-house efforts.</p>
 
+            <div class="section-rule"><span>The Divide</span></div>
             <h2>City Dreams vs. Village Dramas</h2>
+            
             <p>This gap hasn’t gone unnoticed. Critics point out that many Dhaka-born generations often skip Dhallywood altogether, choosing instead to stream or import Bollywood and Hollywood films. The familiar formula – ostentatious heroes wielding machetes, item songs, and rural "grassroots" patriotism – no longer resonates with white-collar viewers.</p>
             
             <p>For example, Farooki’s <i>Doob</i> (2017), about a filmmaker in Gulshan, was praised for addressing urban issues but criticized for its portrayal of excessive wealth. One reviewer quipped, “The lifestyle is too affluent” – making the story feel unreal. Even when filmmakers attempt urban settings, the execution often rings false. In contrast, the surprise success of <i>Aynabaji</i> (2016) proved there was an appetite for smart city stories, though such cases remain rare. Other recent attempts have either attracted only modest audiences or flopped, suggesting Dhallywood still struggles to depict urban life convincingly.</p>
@@ -51,12 +167,16 @@
                 <p class="caption">Bridging the gap: Dhallywood's struggle to mirror the urban professional experience.</p>
             </div>
 
+            <div class="section-rule"><span>A Shift in Narrative</span></div>
             <h2>Utshob’s Urban Awakening</h2>
+            
             <p><i>Utshob</i> (2025) changed the conversation. Released during Eid, when only the biggest mainstream films typically play, this family drama is set entirely in Dhaka’s Mohammadpur neighborhood. It portrays festival gatherings and family tensions as central themes, integrating local Dhaka traditions and metro city soundscapes. Critics immediately noted that Utshob "explores the complexities of urban middle-class life in Bangladesh" rather than offering typical escapism.</p>
             
             <p>Importantly, <i>Utshob</i> quickly became a mainstream hit. Reviewers highlighted that its success was "a testament to the fact that guns, mayhem, and item songs do not monopolize film demand." In short, Utshob hit a sweet spot: urban audiences saw their own lives reflected. As one opinion writer observes, its performance shows educated middle-class viewers are celebrating this refreshing treat.</p>
 
+            <div class="section-rule"><span>The Digital Wave</span></div>
             <h2>Streaming City: OTT’s New Urban Stories</h2>
+            
             <p>Streaming platforms have become the real champions of urban narratives. Since 2020, Chorki, Bongo, and Bioscope have launched dozens of series squarely aimed at Dhaka’s youth and middle class. Notably, much of their original content centers on city life:</p>
             
             <ul class="exp-details" style="margin-left: 1.5rem; margin-top: 1rem;">
@@ -74,12 +194,16 @@
                 <p class="caption">The OTT shift: Platforms like Chorki and Bongo are redefining urban storytelling.</p>
             </div>
 
+            <div class="section-rule"><span>Future Outlook</span></div>
             <h2>From Streaming Back to Theaters?</h2>
+            
             <p>Early signs of this transition are mixed. On one hand, <i>Utshob</i> and <i>Chokkor 302</i> suggest multiplex audiences will turn out for quality social dramas when well-marketed. Chorki itself has stepped into theatrical production, signaling industry confidence that city stories can cross over.</p>
             
             <p>On the other hand, many experts still view theatrical production as risk-averse. As urban viewers increasingly binge-watch at home, Dhallywood is watching closely. Some predict a hit series could see a cinema spin-off, or vice versa, in the coming years.</p>
 
-            <p>In sum, Bangladesh’s cinema is at a turning point. The industry has long relied on rural melodrama for mass appeal, but there’s now evidence the burgeoning middle class wants to see itself onscreen. Filmmakers should seize this moment – blending emotional realism with commercial flair – or risk losing another generation of urban moviegoers.</p>
+            <p>In sum, Bangladesh’s cinema is at a turning point. The industry has long relied on rural melodrama for mass appeal, but there’s now evidence the burgeoning middle class wants to see itself onscreen. Filmmakers should seize this moment – blending emotional realism with commercial flair...</p>
+
+            <p class="closing-line">...or risk losing another generation of urban moviegoers.</p>
         </article>
     </main>
 
