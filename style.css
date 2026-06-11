@@ -333,26 +333,36 @@ body::before {
     transition: opacity 0.3s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.sun-icon {
-    color: #f59e0b;
-    opacity: 1;
-    transform: rotate(0deg);
+/* Icon base styles */
+.sun-icon, .moon-icon {
+    width: 18px; /* Increased slightly for the new pill button */
+    height: 18px;
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-[data-theme="dark"] .sun-icon {
+/* Sun active state (Now shows in DARK MODE) */
+.sun-icon {
+    color: #f59e0b; /* Warm amber */
     opacity: 0;
     transform: rotate(-90deg);
 }
 
+[data-theme="dark"] .sun-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Moon active state (Now shows in LIGHT MODE) */
 .moon-icon {
-    color: #60a5fa;
-    opacity: 0;
-    transform: rotate(90deg);
+    color: #60a5fa; /* Cool blue */
+    opacity: 1;
+    transform: rotate(0deg);
 }
 
 [data-theme="dark"] .moon-icon {
-    opacity: 1;
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: rotate(90deg);
 }
 
 /* Layout & Sections */
