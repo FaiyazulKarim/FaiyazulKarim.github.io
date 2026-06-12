@@ -427,6 +427,15 @@ main {
     height: 100%;
     object-fit: cover;
     border-radius: 20px; 
+    
+    /* --- NEW PROPERTIES FOR TRIMMING --- */
+    transform: scale(1.08); /* Zooms in 8% to give us image to trim */
+    
+    /* X (Horizontal) and Y (Vertical) positioning:
+       - X: 30% shifts the image left, trimming the right edge.
+       - Y: 80% shifts the image down, trimming the top edge. 
+       Adjust these percentages to fine-tune the exact crop! */
+    object-position: 30% 80%; 
 }
 
 .hero-text {
